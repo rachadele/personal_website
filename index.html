@@ -1,87 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Rachel Adele Schwartz Consulting</title>
 
-	<!-- Google Font: Poppins -->
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-	<!-- Page styling -->
+	<!-- Google Fonts: Lora for body, Playfair Display for headings -->
+	<link
+		href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@600;700&display=swap"
+		rel="stylesheet">
+	<!-- Font Awesome for icons -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 	<style>
+		/* Body styling */
+		/* Body styling */
 		body {
-			font-family: 'Poppins', sans-serif;
+			font-family: 'Lora', serif;
+			/* Elegant serif for readable body text */
+
+			/* Add a photo background from raw GitHub URL */
+			background-image: url('https://raw.githubusercontent.com/rachadele/personal_website/main/seatosummit.JPG');
+			background-size: cover;
+			/* Cover entire screen */
+			background-position: center;
+			/* Center the image */
+			background-repeat: no-repeat;
+			/* No tiling */
+			background-attachment: fixed;
+			/* Optional: keeps background fixed */
+
 			background-color: #ffe6f0;
-			/* Soft pink background */
-			color: #333;
-			max-width: 1000px;
+			/* Fallback soft pink background */
+			color: #fff;
+			/* Text readable on image */
+			margin: 0;
+			/* Remove default margin */
+			padding: 20px;
+			/* Add padding around content */
+			line-height: 1.6;
+			/* Improve readability */
+		}
+
+
+		/* Add a subtle semi-transparent overlay over the background photo */
+		body::before {
+			content: "";
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(246, 244, 245, 0.5);
+			/* light pink overlay, semi-transparent */
+			z-index: -1;
+		}
+
+		/* Keep all text in the container without extra boxes */
+		.container {
+			max-width: 800px;
 			margin: 50px auto;
-			padding: 0 20px;
+			padding: 20px;
+			/* padding around content */
+			color: #333;
+			/* text color over overlay */
 			line-height: 1.6;
 		}
 
+		/* Main page title */
 		h1 {
+			font-family: 'Playfair Display', serif;
+			/* Elegant heading font */
 			color: #9c185a;
-			/* Deep pink heading */
-			font-weight: 500;
+			/* Deep pink for heading */
+			font-weight: 700;
 			text-align: left;
+			/* Align left on large screens */
 			margin-bottom: 10px;
+			/* Space below heading */
+			font-size: 3rem;
+			/* Large title on desktop */
 		}
 
+		/* Subheadings */
 		h2 {
 			color: #9c185a;
-			font-weight: 600;
+			/* Matching pink for headings */
+			font-weight: 700;
 			margin-bottom: 15px;
+			font-size: 2rem;
 		}
 
+		/* Paragraphs */
 		p {
-			font-size: 1.1rem;
+			font-size: 1.5rem;
+			/* Large readable text */
 		}
 
+		/* Links */
 		a {
 			color: #b30059;
-			/* Darker pink links */
+			/* Darker pink for links */
 			text-decoration: none;
+			/* Remove underline */
 		}
 
 		a:hover {
 			text-decoration: underline;
+			/* Underline on hover */
 		}
 
+		.section,
 		.contact {
-			margin-top: 30px;
-			padding: 20px;
-			background: #ffd9e6;
-			/* Lighter pink for box */
+			background: rgba(255, 230, 240, 0.5);
+			/* semi-transparent pink */
+			padding: 20px 25px;
+			/* padding inside the box */
 			border-radius: 12px;
+			margin-top: 20px;
+			/* space between sections */
 			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+		}
+
+		.contact a {
+			margin-right: 20px;
+			/* space between icons */
+			font-size: 2.5rem;
+			/* bigger icon size */
+			color: #b30059;
+			/* pink theme */
+		}
+
+		.contact a:hover {
+			color: #9c185a;
+			/* darker pink on hover */
+		}
+
+		/* If the screen width is 600px or smaller (typical phone), adjust the font sizes and make the contact box full-width. */
+		@media (max-width: 600px) {
+			h1 {
+				font-size: 1.5rem;
+				/* Reduce title size for small screens */
+			}
+
+			h2 {
+				font-size: 1.2rem;
+				/* Smaller subheadings */
+			}
+
+			p {
+				font-size: 1rem;
+				/* Smaller paragraph text */
+			}
+
+			.contact {
+				padding: 15px;
+				/* Slightly less padding */
+				margin-top: 20px;
+				width: 100%;
+				/* Ensure full width */
+			}
 		}
 	</style>
 </head>
 
 <body>
-	<!-- Main title of the page -->
-	<h1>Rachel Adele Schwartz | Vancouver, British Columbia, Canada </h1>
+	<!-- Main container for all content -->
+	<div class="container">
+		<!-- Page title -->
+		<h1>Rachel Adele Schwartz | Vancouver, British Columbia </h1>
 
-	<!-- Tagline/intro line -->
-	<p><strong>Scientific consulting for film, television, and media.</strong></p>
+		<!-- Tagline / intro -->
+		<p><strong>Scientific consulting for film, television, and media</strong></p>
 
-	<!-- Short description of services -->
-	<p>
-		I provide expert advice on scientific accuracy for film, television and other media.
-	</p>
+		<!-- About me section -->
+		<div class="section">
+			<p>
+				<strong>Who I Am:</strong> I am a second-year Bioinformatics PhD student at the University of British
+				Columbia. Bioinformatics is a broad discipline at the intersection of computer science, machine
+				learning, and biology. My PhD thesis involves using genetic signatures to study patterns of neurological
+				and psychiatric disease in the brain.
+			</p>
+			<p>
+				<strong>My Background:</strong> Originally from Los Angeles, California, I earned my B.S. in
+				Bioengineering from the University of California, Santa Cruz.
+				I worked for 3 years as a data analyst for the UCSC Genomics Institute, and am now pursuing my PhD at
+				UBC in the Pavlidis laboratory.
+				My areas of expertise include biology, biochemistry, genomics, DNA sequencing, neuroscience, machine
+				learning, and AI.
+			</p>
+			<p>
+				<strong>What I Do:</strong> I provide scientific consulting services to help ensure the accuracy and
+				authenticity of scientific content in film, television, and other media. I can assist with script
+				editing, brainstorming, and even proofreading AI-generated content to ensure it aligns with current
+				scientific understanding.
+			</p>
+			<!-- More about me-->
+		</div>
 
-	<!-- Contact section in a highlighted box -->
-	<div class="contact">
-		<h2>Contact Me</h2>
-		<!-- Email link -->
-		<p>Email: <a href="mailto:raschwaa@gmail.com">raschwaa@gmail.com</a></p>
-		<!-- LinkedIn link -->
-		<p>LinkedIn: <a href="https://www.linkedin.com/in/rachel-s-00684a183/">linkedin.com/in/rachel-s-00684a183/</a>
-		</p>
+		<!-- Contact section with icons -->
+		<div class="contact">
+			<h2>Contact Me</h2>
+			<p>
+				<a href="mailto:raschwaa@gmail.com"><i class="fas fa-envelope"></i></a>
+				<a href="https://www.linkedin.com/in/rachel-s-00684a183/" target="_blank"><i
+						class="fab fa-linkedin"></i></a>
+				<a href="https://github.com/rachadele" target="_blank"><i class="fab fa-github"></i></a>
+				<a href="https://www.instagram.com/facialwartz" target="_blank"><i class="fab fa-instagram"></i></a>
+			</p>
+		</div>
 	</div>
 </body>
 
