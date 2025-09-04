@@ -30,7 +30,7 @@
 
 		/* Left: text */
 		.left {
-			width: 50%;
+			flex: 2;
 			padding: 50px;
 			background-color: #e2f8f4;
 			/* light green */
@@ -40,14 +40,17 @@
 			justify-content: center;
 		}
 
-		/* Right: background image */
+		/* Right: image */
 		.right {
-			width: 80%;
-			background-image: url('https://raw.githubusercontent.com/rachadele/personal_website/main/seatosummit.JPG');
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
+			flex: 3;
 		}
+
+		.right img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
 
 		/* Headings and links */
 		h1 {
@@ -145,7 +148,9 @@
 		</div>
 
 		<!-- Right: image -->
-		<div class="right"></div>
+		<div class="right">
+			<img src="https://raw.githubusercontent.com/rachadele/personal_website/main/seatosummit.JPG" alt="Photo">
+		</div>
 	</div>
 
 	<footer>© 2025 Rachel Adele Schwartz. All rights reserved.</footer>
