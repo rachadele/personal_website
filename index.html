@@ -95,22 +95,16 @@
 				flex-direction: column;
 			}
 
-			.left,
-			.right {
-				flex: 1 1 100%;
-				min-height: 50vh;
-			}
-
-			.right {
-				background-size: contain;
-				background-position: top;
-				order: 0;
-				/* Move right to bottom on mobile */
+			.right img {
+				height: auto;
+				/* natural image height */
+				object-fit: contain;
+				/* no cropping */
+				width: 100%;
 			}
 
 			.left {
-				order: -1;
-				/*text goes below*/
+				padding: 20px;
 			}
 		}
 	</style>
